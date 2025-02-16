@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "eu-west-2"
-}
-
 # Create a VPC (optional, if not already created)
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
@@ -23,23 +19,4 @@ resource "aws_subnet" "subnet_2" {
 # ECS Cluster
 resource "aws_ecs_cluster" "ecs_cluster" {
   name = "my-ecs-cluster"
-}
-
-# ECS Task Role (if needed for permissions)
-resource "aws_iam_role" "ecs_task_role" {
-  name = "ecs-task-role"
-  
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action    = "sts:AssumeRole"
-        Principal = {
-          Service = "ecs-tasks.amazonaws.com"
-        }
-        Effect    = "Allow"
-        Sid       = ""
-      },
-    ]
-  })
 }
