@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo-cd</artifactId>
+	<artifactId>cdms</artifactId>
 	<version>0.0.1</version>
-	<name>demo-cd</name>
+	<name>cdms</name>
 	<description>Demo project for Certificate Deposit system powered by Spring Boot</description>
 	<url/>
 	<licenses>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>23</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
